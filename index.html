@@ -25,6 +25,8 @@
             overflow-x: hidden;
         }
 
+        /* CORAÇÕES */
+
         .heart {
             position: fixed;
             top: -50px;
@@ -43,6 +45,8 @@
                 transform: translateY(110vh) rotate(360deg);
             }
         }
+
+        /* INÍCIO */
 
         .hero {
             min-height: 100vh;
@@ -68,6 +72,8 @@
             margin-bottom: 25px;
         }
 
+        /* FOTO PRINCIPAL */
+
         .foto-principal {
             width: 280px;
             height: 350px;
@@ -82,6 +88,8 @@
         .foto-principal:hover {
             transform: scale(1.04);
         }
+
+        /* BOTÃO */
 
         .botao {
             display: inline-block;
@@ -100,6 +108,8 @@
             transform: scale(1.08);
         }
 
+        /* SEÇÕES */
+
         section {
             padding: 80px 20px;
             text-align: center;
@@ -115,6 +125,8 @@
             margin-bottom: 30px;
         }
 
+        /* CARTA */
+
         .carta {
             background: rgba(255, 255, 255, 0.18);
             padding: 35px;
@@ -124,6 +136,8 @@
             font-size: 1.1rem;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         }
+
+        /* MOTIVOS */
 
         .motivos {
             display: grid;
@@ -140,13 +154,49 @@
             font-size: 1.1rem;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
             transition: 0.3s;
+            cursor: pointer;
         }
 
         .motivo:hover {
             transform: translateY(-8px);
         }
 
-        /* GALERIA COM 3 FOTOS */
+        .motivo:active {
+            transform: scale(0.97);
+        }
+
+        /* MENSAGEM DOS BALÕES */
+
+        .mensagem-motivo {
+            display: none;
+            margin-top: 15px;
+            padding: 18px;
+            background: rgba(255, 255, 255, 0.95);
+            color: #e84375;
+            border-radius: 18px;
+            font-weight: normal;
+            font-size: 1rem;
+            line-height: 1.6;
+            animation: aparecer 0.4s ease;
+        }
+
+        .motivo.ativo .mensagem-motivo {
+            display: block;
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* GALERIA */
 
         .galeria {
             display: grid;
@@ -168,6 +218,8 @@
             transform: scale(1.04);
         }
 
+        /* FINAL */
+
         .final {
             min-height: 60vh;
             display: flex;
@@ -183,6 +235,8 @@
             font-size: 1.3rem;
             line-height: 1.6;
         }
+
+        /* CELULAR */
 
         @media (max-width: 600px) {
 
@@ -312,22 +366,85 @@
 
             <div class="motivos">
 
-                <div class="motivo">❤️ Seu jeito</div>
 
-                <div class="motivo">😂 Suas brincadeiras</div>
+                <!-- SEU JEITO -->
 
-                <div class="motivo">🥰 Seu sorriso</div>
+                <div class="motivo" onclick="abrirMensagem(this)">
 
-                <div class="motivo">
-                    💕 A forma como você me faz sentir
+                    ❤️ Seu jeito
+
+                    <div class="mensagem-motivo">
+
+                        Eu amo a maneira como você é,
+                        seu jeitinho único que faz eu gostar
+                        cada vez mais de você. ❤️
+
+                    </div>
+
                 </div>
 
-                <div class="motivo">
+
+                <!-- SUAS BRINCADEIRAS -->
+
+                <div class="motivo" onclick="abrirMensagem(this)">
+
+                    😂 Suas brincadeiras
+
+                    <div class="mensagem-motivo">
+
+                        Até nos momentos mais simples,
+                        você consegue arrancar um sorriso meu. 😂❤️
+
+                    </div>
+
+                </div>
+
+
+                <!-- SEU SORRISO -->
+
+                <div class="motivo" onclick="abrirMensagem(this)">
+
+                    🥰 Seu sorriso
+
+                    <div class="mensagem-motivo">
+
+                        Seu sorriso tem um jeito de melhorar
+                        qualquer dia meu. 🥰❤️
+
+                    </div>
+
+                </div>
+
+
+                <!-- CADA MOMENTO -->
+
+                <div class="motivo" onclick="abrirMensagem(this)">
+
                     ❤️ Cada momento com você
+
+                    <div class="mensagem-motivo">
+
+                        Até os momentos mais simples ao seu lado
+                        acabam se tornando lembranças que eu quero
+                        guardar para sempre. ❤️
+
+                    </div>
+
                 </div>
 
-                <div class="motivo">
+
+                <!-- SIMPLESMENTE VOCÊ -->
+
+                <div class="motivo" onclick="abrirMensagem(this)">
+
                     🥹 Simplesmente você
+
+                    <div class="mensagem-motivo">
+
+                        Eu te amo muito do jeitinho que você é. ❤️
+
+                    </div>
+
                 </div>
 
             </div>
@@ -348,20 +465,33 @@
             <div class="galeria">
 
                 <!-- FOTO 1 -->
+
                 <img
                     src="foto1.jpg"
                     alt="Momento especial ❤️"
                 >
 
-                <!-- FOTO 2 - VOCÊS DOIS -->
+
+                <!-- FOTO 2 -->
+
                 <img
                     src="foto2.jpg"
                     alt="Nós dois juntos ❤️"
                 >
 
+
                 <!-- FOTO 3 -->
+
                 <img
                     src="foto3.jpg"
+                    alt="Momento especial ❤️"
+                >
+
+
+                <!-- FOTO 4 -->
+
+                <img
+                    src="foto4.jpg"
                     alt="Momento especial ❤️"
                 >
 
@@ -394,6 +524,29 @@
         </div>
 
     </section>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function abrirMensagem(elemento) {
+
+            const motivos = document.querySelectorAll(".motivo");
+
+            motivos.forEach(function(motivo) {
+
+                if (motivo !== elemento) {
+                    motivo.classList.remove("ativo");
+                }
+
+            });
+
+            elemento.classList.toggle("ativo");
+
+        }
+
+    </script>
 
 </body>
 

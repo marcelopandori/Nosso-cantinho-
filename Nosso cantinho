@@ -1,0 +1,248 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Nosso Cantinho ❤️</title><style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* CORAÇÕES NO FUNDO */
+.heart {
+    position: fixed;
+    color: rgba(255,255,255,0.5);
+    font-size: 25px;
+    animation: cair 8s linear infinite;
+    z-index: -1;
+}
+
+@keyframes cair {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* TELA INICIAL */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* FOTO PRINCIPAL */
+.foto-principal {
+    width: 280px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 25px;
+    border: 6px solid white;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    margin-bottom: 25px;
+    transition: 0.4s;
+}
+
+.foto-principal:hover {
+    transform: scale(1.05);
+}
+
+/* BOTÃO */
+.botao {
+    display: inline-block;
+    padding: 15px 30px;
+    background: white;
+    color: #e75480;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    transform: scale(1.1);
+    background: #ffe6ee;
+}
+
+/* SEÇÕES */
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+h2 {
+    font-size: 2.3rem;
+    margin-bottom: 25px;
+}
+
+/* CARTA */
+.carta {
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    padding: 35px;
+    border-radius: 25px;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* MOTIVOS */
+.motivos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.motivo {
+    background: white;
+    color: #e75480;
+    padding: 25px;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.motivo:hover {
+    transform: translateY(-10px);
+}
+
+/* GALERIA */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
+}
+
+.galeria img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 3px solid white;
+    transition: 0.3s;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+}
+
+/* FINAL */
+.final {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.final h2 {
+    font-size: 2.5rem;
+}
+
+.final p {
+    font-size: 1.3rem;
+    margin-top: 20px;
+}
+
+/* CELULAR */
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .foto-principal {
+        width: 230px;
+        height: 300px;
+    }
+
+}
+
+</style></head><body><!-- CORAÇÕES --><div class="heart" style="left:10%; animation-delay:0s;">❤️</div>
+<div class="heart" style="left:25%; animation-delay:2s;">💕</div>
+<div class="heart" style="left:45%; animation-delay:4s;">❤️</div>
+<div class="heart" style="left:65%; animation-delay:1s;">💖</div>
+<div class="heart" style="left:85%; animation-delay:3s;">💕</div><!-- INÍCIO --><section class="hero"><div class="hero-content"><h1>Para o amor da minha vida ❤️</h1><p>
+Eu fiz esse pequeno cantinho especialmente para você...
+Porque algumas coisas são difíceis de explicar apenas com palavras. 🥰
+</p><!-- FOTO DE VOCÊS --><img src="nossa-foto.jpg" class="foto-principal" alt="Nós dois ❤️"><br><a href="#carta" class="botao">
+Clique aqui ❤️
+</a></div></section><!-- CARTA --><section id="carta"><div class="container"><h2>💌 Uma mensagem para você</h2><div class="carta"><p>
+Meu amor, eu queria fazer algo diferente para você.
+</p><br><p>
+Talvez eu nem consiga explicar completamente tudo o que sinto,
+mas quero que você saiba o quanto você é especial para mim.
+</p><br><p>
+Cada conversa, cada risada, cada momento engraçado e até as
+nossas brincadeiras significam muito para mim. ❤️
+</p><br><p>
+Eu espero que quando você olhar para esse site, você lembre
+do quanto é amada e do quanto é importante para mim.
+</p><br><p>
+Com todo meu carinho... ❤️
+</p></div></div></section><!-- MOTIVOS --><section><div class="container"><h2>💕 Algumas coisas que eu amo em você</h2><div class="motivos"><div class="motivo">
+❤️ Seu jeito
+</div><div class="motivo">
+😂 Suas brincadeiras
+</div><div class="motivo">
+🥰 Seu sorriso
+</div><div class="motivo">
+💕 O jeito que você me faz sentir
+</div><div class="motivo">
+❤️ Cada momento ao seu lado
+</div><div class="motivo">
+🥹 Simplesmente você
+</div></div></div></section><!-- GALERIA --><section><div class="container"><h2>📸 Nossos momentos</h2><div class="galeria"><!-- VOCÊ PODE ADICIONAR AS FOTOS DEPOIS --><img src="foto1.jpg" alt="Momento especial ❤️"><img src="foto2.jpg" alt="Nós ❤️"><img src="foto3.jpg" alt="Momentos engraçados 😂"><img src="foto4.jpg" alt="Mais um momento ❤️"></div></div></section><!-- FINAL --><section class="final"><div class="container"><h2>Eu escolheria você ❤️</h2><p>
+Hoje, amanhã e em todos os dias que ainda estão por vir. 🥰
+</p><p style="font-size:2rem; margin-top:30px;">
+❤️ ❤️ ❤️
+</p></div></section></body>
+</html>

@@ -1,248 +1,400 @@
-<!DOCTYPE html><html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Nosso Cantinho ❤️</title><style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-html {
-    scroll-behavior: smooth;
-}
+    <title>Nosso Cantinho ❤️</title>
 
-body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
-    color: #fff;
-    overflow-x: hidden;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-/* CORAÇÕES NO FUNDO */
-.heart {
-    position: fixed;
-    color: rgba(255,255,255,0.5);
-    font-size: 25px;
-    animation: cair 8s linear infinite;
-    z-index: -1;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-@keyframes cair {
-    0% {
-        transform: translateY(-100px) rotate(0deg);
-        opacity: 0;
-    }
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            color: white;
+            overflow-x: hidden;
+        }
 
-    20% {
-        opacity: 1;
-    }
+        /* CORAÇÕES */
+        .heart {
+            position: fixed;
+            top: -50px;
+            font-size: 25px;
+            animation: cair 8s linear infinite;
+            opacity: 0.6;
+            z-index: -1;
+        }
 
-    100% {
-        transform: translateY(110vh) rotate(360deg);
-        opacity: 0;
-    }
-}
+        @keyframes cair {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+            }
 
-/* TELA INICIAL */
-.hero {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 30px;
-}
+            100% {
+                transform: translateY(110vh) rotate(360deg);
+            }
+        }
 
-.hero-content {
-    max-width: 600px;
-}
+        /* INÍCIO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px 20px;
+        }
 
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 15px;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-}
+        .hero-content {
+            max-width: 650px;
+        }
 
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
 
-/* FOTO PRINCIPAL */
-.foto-principal {
-    width: 280px;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 25px;
-    border: 6px solid white;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
-    margin-bottom: 25px;
-    transition: 0.4s;
-}
+        .hero p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
 
-.foto-principal:hover {
-    transform: scale(1.05);
-}
+        /* FOTO PRINCIPAL */
+        .foto-principal {
+            width: 280px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 25px;
+            border: 6px solid white;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            margin: 20px 0;
+            transition: 0.4s;
+        }
 
-/* BOTÃO */
-.botao {
-    display: inline-block;
-    padding: 15px 30px;
-    background: white;
-    color: #e75480;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    transition: 0.3s;
-}
+        .foto-principal:hover {
+            transform: scale(1.04);
+        }
 
-.botao:hover {
-    transform: scale(1.1);
-    background: #ffe6ee;
-}
+        /* BOTÃO */
+        .botao {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 15px 30px;
+            border-radius: 30px;
+            background: white;
+            color: #e84375;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
 
-/* SEÇÕES */
-section {
-    padding: 80px 20px;
-    text-align: center;
-}
+        .botao:hover {
+            transform: scale(1.08);
+        }
 
-.container {
-    max-width: 800px;
-    margin: auto;
-}
+        /* SEÇÕES */
+        section {
+            padding: 80px 20px;
+            text-align: center;
+        }
 
-h2 {
-    font-size: 2.3rem;
-    margin-bottom: 25px;
-}
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
 
-/* CARTA */
-.carta {
-    background: rgba(255,255,255,0.2);
-    backdrop-filter: blur(10px);
-    padding: 35px;
-    border-radius: 25px;
-    line-height: 1.8;
-    font-size: 1.1rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-}
+        h2 {
+            font-size: 2.3rem;
+            margin-bottom: 30px;
+        }
 
-/* MOTIVOS */
-.motivos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
+        /* CARTA */
+        .carta {
+            background: rgba(255, 255, 255, 0.18);
+            padding: 35px;
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+            line-height: 1.8;
+            font-size: 1.1rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
 
-.motivo {
-    background: white;
-    color: #e75480;
-    padding: 25px;
-    border-radius: 20px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    transition: 0.3s;
-}
+        /* MOTIVOS */
+        .motivos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
 
-.motivo:hover {
-    transform: translateY(-10px);
-}
+        .motivo {
+            background: white;
+            color: #e84375;
+            padding: 25px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+        }
 
-/* GALERIA */
-.galeria {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 15px;
-}
+        .motivo:hover {
+            transform: translateY(-8px);
+        }
 
-.galeria img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 20px;
-    border: 3px solid white;
-    transition: 0.3s;
-}
+        /* GALERIA */
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
 
-.galeria img:hover {
-    transform: scale(1.05);
-}
+        .galeria img {
+            width: 100%;
+            height: 330px;
+            object-fit: cover;
+            border-radius: 20px;
+            border: 4px solid white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+        }
 
-/* FINAL */
-.final {
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        .galeria img:hover {
+            transform: scale(1.04);
+        }
 
-.final h2 {
-    font-size: 2.5rem;
-}
+        /* FINAL */
+        .final {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-.final p {
-    font-size: 1.3rem;
-    margin-top: 20px;
-}
+        .final h2 {
+            font-size: 2.7rem;
+        }
 
-/* CELULAR */
-@media (max-width: 600px) {
+        .final p {
+            font-size: 1.3rem;
+            line-height: 1.6;
+        }
 
-    .hero h1 {
-        font-size: 2.2rem;
-    }
+        /* CELULAR */
+        @media (max-width: 600px) {
 
-    h2 {
-        font-size: 2rem;
-    }
+            h1 {
+                font-size: 2.2rem;
+            }
 
-    .foto-principal {
-        width: 230px;
-        height: 300px;
-    }
+            h2 {
+                font-size: 1.9rem;
+            }
 
-}
+            .foto-principal {
+                width: 250px;
+                height: 320px;
+            }
 
-</style></head><body><!-- CORAÇÕES --><div class="heart" style="left:10%; animation-delay:0s;">❤️</div>
-<div class="heart" style="left:25%; animation-delay:2s;">💕</div>
-<div class="heart" style="left:45%; animation-delay:4s;">❤️</div>
-<div class="heart" style="left:65%; animation-delay:1s;">💖</div>
-<div class="heart" style="left:85%; animation-delay:3s;">💕</div><!-- INÍCIO --><section class="hero"><div class="hero-content"><h1>Para o amor da minha vida ❤️</h1><p>
-Eu fiz esse pequeno cantinho especialmente para você...
-Porque algumas coisas são difíceis de explicar apenas com palavras. 🥰
-</p><!-- FOTO DE VOCÊS --><img src="nossa-foto.jpg" class="foto-principal" alt="Nós dois ❤️"><br><a href="#carta" class="botao">
-Clique aqui ❤️
-</a></div></section><!-- CARTA --><section id="carta"><div class="container"><h2>💌 Uma mensagem para você</h2><div class="carta"><p>
-Meu amor, eu queria fazer algo diferente para você.
-</p><br><p>
-Talvez eu nem consiga explicar completamente tudo o que sinto,
-mas quero que você saiba o quanto você é especial para mim.
-</p><br><p>
-Cada conversa, cada risada, cada momento engraçado e até as
-nossas brincadeiras significam muito para mim. ❤️
-</p><br><p>
-Eu espero que quando você olhar para esse site, você lembre
-do quanto é amada e do quanto é importante para mim.
-</p><br><p>
-Com todo meu carinho... ❤️
-</p></div></div></section><!-- MOTIVOS --><section><div class="container"><h2>💕 Algumas coisas que eu amo em você</h2><div class="motivos"><div class="motivo">
-❤️ Seu jeito
-</div><div class="motivo">
-😂 Suas brincadeiras
-</div><div class="motivo">
-🥰 Seu sorriso
-</div><div class="motivo">
-💕 O jeito que você me faz sentir
-</div><div class="motivo">
-❤️ Cada momento ao seu lado
-</div><div class="motivo">
-🥹 Simplesmente você
-</div></div></div></section><!-- GALERIA --><section><div class="container"><h2>📸 Nossos momentos</h2><div class="galeria"><!-- VOCÊ PODE ADICIONAR AS FOTOS DEPOIS --><img src="foto1.jpg" alt="Momento especial ❤️"><img src="foto2.jpg" alt="Nós ❤️"><img src="foto3.jpg" alt="Momentos engraçados 😂"><img src="foto4.jpg" alt="Mais um momento ❤️"></div></div></section><!-- FINAL --><section class="final"><div class="container"><h2>Eu escolheria você ❤️</h2><p>
-Hoje, amanhã e em todos os dias que ainda estão por vir. 🥰
-</p><p style="font-size:2rem; margin-top:30px;">
-❤️ ❤️ ❤️
-</p></div></section></body>
+            .carta {
+                padding: 25px 20px;
+            }
+
+            section {
+                padding: 60px 15px;
+            }
+
+            .galeria img {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- CORAÇÕES -->
+
+    <div class="heart" style="left: 10%; animation-delay: 0s;">❤️</div>
+    <div class="heart" style="left: 25%; animation-delay: 2s;">💕</div>
+    <div class="heart" style="left: 45%; animation-delay: 4s;">❤️</div>
+    <div class="heart" style="left: 65%; animation-delay: 1s;">💖</div>
+    <div class="heart" style="left: 85%; animation-delay: 3s;">💕</div>
+
+
+    <!-- TELA INICIAL -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>Para uma pessoa muito especial ❤️</h1>
+
+            <p>
+                Eu fiz esse pequeno cantinho especialmente para você...
+                porque existem pessoas que merecem algo mais do que apenas
+                algumas palavras. 🥰❤️
+            </p>
+
+            <!-- FOTO PRINCIPAL -->
+
+            <img
+                src="nossa-foto.jpg"
+                class="foto-principal"
+                alt="Nós dois ❤️"
+            >
+
+            <br>
+
+            <a href="#carta" class="botao">
+                Clique aqui ❤️
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- CARTA -->
+
+    <section id="carta">
+
+        <div class="container">
+
+            <h2>💌 Uma mensagem para você</h2>
+
+            <div class="carta">
+
+                <p>
+                    Eu queria fazer algo diferente para você.
+                    Algo simples, mas que fosse feito especialmente pensando em você. ❤️
+                </p>
+
+                <br>
+
+                <p>
+                    Talvez eu não consiga colocar em palavras tudo aquilo
+                    que eu sinto, mas espero que esse pequeno site consiga
+                    mostrar pelo menos um pouquinho do quanto você é especial para mim.
+                </p>
+
+                <br>
+
+                <p>
+                    Cada conversa, cada risada, cada brincadeira e cada
+                    momento que compartilhamos se tornou especial para mim. 🥰
+                </p>
+
+                <br>
+
+                <p>
+                    Espero que sempre que você entrar aqui, você lembre
+                    do quanto é importante para mim. ❤️
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MOTIVOS -->
+
+    <section>
+
+        <div class="container">
+
+            <h2>💕 Algumas coisas que eu amo em você</h2>
+
+            <div class="motivos">
+
+                <div class="motivo">❤️ Seu jeito</div>
+
+                <div class="motivo">😂 Suas brincadeiras</div>
+
+                <div class="motivo">🥰 Seu sorriso</div>
+
+                <div class="motivo">💕 A forma como você me faz sentir</div>
+
+                <div class="motivo">❤️ Cada momento com você</div>
+
+                <div class="motivo">🥹 Simplesmente você</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GALERIA -->
+
+    <section>
+
+        <div class="container">
+
+            <h2>📸 Alguns momentos especiais</h2>
+
+            <div class="galeria">
+
+                <!-- FOTO 2 -->
+                <img
+                    src="foto1.jpg"
+                    alt="Momento especial ❤️"
+                >
+
+                <!-- FOTO 3 -->
+                <img
+                    src="foto2.jpg"
+                    alt="Você 🥰"
+                >
+
+                <!-- FOTO 4 -->
+                <img
+                    src="foto3.jpg"
+                    alt="Momentos especiais ❤️"
+                >
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FINAL -->
+
+    <section class="final">
+
+        <div class="container">
+
+            <h2>❤️ Você é muito especial para mim ❤️</h2>
+
+            <p>
+                E eu espero que esse pequeno cantinho
+                sempre te faça sorrir. 🥰
+            </p>
+
+            <p style="font-size: 2.5rem; margin-top: 30px;">
+                ❤️ 💕 ❤️ 💕 ❤️
+            </p>
+
+        </div>
+
+    </section>
+
+</body>
+
 </html>

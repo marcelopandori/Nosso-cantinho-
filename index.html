@@ -1,539 +1,849 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Nosso Cantinho ❤️</title>
+<title>Para Raquel 💗</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        html {
-            scroll-behavior: smooth;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #ff758c, #ff7eb3);
-            color: white;
-            overflow-x: hidden;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background: #fff0f6;
+    color: #5a2940;
+    overflow-x: hidden;
+}
 
-        /* CORAÇÕES */
+/* CORAÇÕES */
 
-        .heart {
-            position: fixed;
-            top: -50px;
-            font-size: 25px;
-            animation: cair 8s linear infinite;
-            opacity: 0.6;
-            z-index: -1;
-        }
+.heart {
+    position: fixed;
+    top: -50px;
+    font-size: 22px;
+    animation: cair 9s linear infinite;
+    opacity: .5;
+    z-index: 0;
+    pointer-events: none;
+}
 
-        @keyframes cair {
-            0% {
-                transform: translateY(-100px) rotate(0deg);
-            }
+@keyframes cair {
+    from {
+        transform: translateY(-80px) rotate(0deg);
+    }
 
-            100% {
-                transform: translateY(110vh) rotate(360deg);
-            }
-        }
+    to {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
 
-        /* INÍCIO */
+/* TELA INICIAL */
 
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 30px 20px;
-        }
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+    background:
+        radial-gradient(circle at top, #ffd1e3, transparent 50%),
+        linear-gradient(135deg, #ffb6d2, #f78fb3);
+}
 
-        .hero-content {
-            max-width: 650px;
-        }
+.hero-content {
+    max-width: 650px;
+    position: relative;
+    z-index: 2;
+}
 
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
+.pequeno {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
 
-        .hero p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            margin-bottom: 25px;
-        }
+h1 {
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+    color: white;
+}
 
-        /* FOTO PRINCIPAL */
+.hero p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: white;
+}
 
-        .foto-principal {
-            width: 280px;
-            height: 350px;
-            object-fit: cover;
-            border-radius: 25px;
-            border: 6px solid white;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-            margin: 20px 0;
-            transition: 0.4s;
-        }
+/* FOTO PRINCIPAL */
 
-        .foto-principal:hover {
-            transform: scale(1.04);
-        }
+.foto-principal {
+    width: 280px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 30px;
+    border: 7px solid white;
+    box-shadow: 0 20px 50px rgba(100, 30, 60, .25);
+    margin: 30px 0;
+}
 
-        /* BOTÃO */
+/* BOTÃO */
 
-        .botao {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 15px 30px;
-            border-radius: 30px;
-            background: white;
-            color: #e84375;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1rem;
-            transition: 0.3s;
-        }
+.botao {
+    display: inline-block;
+    padding: 15px 32px;
+    border-radius: 30px;
+    background: white;
+    color: #e65387;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+    box-shadow: 0 8px 20px rgba(0,0,0,.12);
+}
 
-        .botao:hover {
-            transform: scale(1.08);
-        }
+.botao:hover {
+    transform: translateY(-4px) scale(1.03);
+}
 
-        /* SEÇÕES */
+/* SEÇÕES */
 
-        section {
-            padding: 80px 20px;
-            text-align: center;
-        }
+section {
+    padding: 90px 20px;
+    text-align: center;
+}
 
-        .container {
-            max-width: 900px;
-            margin: auto;
-        }
+.container {
+    max-width: 900px;
+    margin: auto;
+}
 
-        h2 {
-            font-size: 2.3rem;
-            margin-bottom: 30px;
-        }
+h2 {
+    font-size: 2.4rem;
+    margin-bottom: 35px;
+    color: #c43d70;
+}
 
-        /* CARTA */
+/* CARTAS */
 
-        .carta {
-            background: rgba(255, 255, 255, 0.18);
-            padding: 35px;
-            border-radius: 25px;
-            backdrop-filter: blur(10px);
-            line-height: 1.8;
-            font-size: 1.1rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-        }
+.carta {
+    background: white;
+    padding: 40px;
+    border-radius: 30px;
+    line-height: 1.9;
+    font-size: 1.1rem;
+    box-shadow: 0 15px 40px rgba(150, 50, 90, .12);
+    text-align: left;
+}
 
-        /* MOTIVOS */
+.destaque {
+    color: #d63e76;
+    font-weight: bold;
+}
 
-        .motivos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-        }
+/* PEDIDO DE DESCULPAS */
 
-        .motivo {
-            background: white;
-            color: #e84375;
-            padding: 25px;
-            border-radius: 20px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            transition: 0.3s;
-            cursor: pointer;
-        }
+.desculpa {
+    background: linear-gradient(135deg, #ffd9e8, #fff);
+}
 
-        .motivo:hover {
-            transform: translateY(-8px);
-        }
+.anel {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
 
-        .motivo:active {
-            transform: scale(0.97);
-        }
+.caixa-desculpa {
+    max-width: 700px;
+    margin: auto;
+    background: rgba(255,255,255,.9);
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 15px 40px rgba(150,50,90,.12);
+    line-height: 1.9;
+    font-size: 1.1rem;
+}
 
-        /* MENSAGEM DOS BALÕES */
+/* MOTIVOS */
 
-        .mensagem-motivo {
-            display: none;
-            margin-top: 15px;
-            padding: 18px;
-            background: rgba(255, 255, 255, 0.95);
-            color: #e84375;
-            border-radius: 18px;
-            font-weight: normal;
-            font-size: 1rem;
-            line-height: 1.6;
-            animation: aparecer 0.4s ease;
-        }
+.motivos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
 
-        .motivo.ativo .mensagem-motivo {
-            display: block;
-        }
+.motivo {
+    background: white;
+    padding: 28px;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(150,50,90,.12);
+    transition: .3s;
+    color: #c43d70;
+    font-weight: bold;
+}
 
-        @keyframes aparecer {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
+.motivo:hover {
+    transform: translateY(-7px);
+}
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+.mensagem {
+    display: none;
+    margin-top: 15px;
+    font-weight: normal;
+    line-height: 1.6;
+    color: #704054;
+}
 
-        /* GALERIA */
+.motivo.ativo .mensagem {
+    display: block;
+}
 
-        .galeria {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-        }
+/* REFERÊNCIAS DELA */
 
-        .galeria img {
-            width: 100%;
-            height: 330px;
-            object-fit: cover;
-            border-radius: 20px;
-            border: 4px solid white;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            transition: 0.3s;
-        }
+.coisas-dela {
+    background: #ffe5ef;
+}
 
-        .galeria img:hover {
-            transform: scale(1.04);
-        }
+.coisas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
 
-        /* FINAL */
+.coisa {
+    background: white;
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(150,50,90,.1);
+}
 
-        .final {
-            min-height: 60vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+.coisa .emoji {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 12px;
+}
 
-        .final h2 {
-            font-size: 2.7rem;
-        }
+/* GALERIA */
 
-        .final p {
-            font-size: 1.3rem;
-            line-height: 1.6;
-        }
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
 
-        /* CELULAR */
+.galeria img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 25px;
+    border: 5px solid white;
+    box-shadow: 0 12px 30px rgba(100,30,60,.18);
+    transition: .4s;
+}
 
-        @media (max-width: 600px) {
+.galeria img:hover {
+    transform: scale(1.03) rotate(1deg);
+}
 
-            h1 {
-                font-size: 2.2rem;
-            }
+/* SURPRESA */
 
-            h2 {
-                font-size: 1.9rem;
-            }
+.surpresa {
+    background: linear-gradient(135deg, #f78fb3, #d96b9b);
+    color: white;
+}
 
-            .foto-principal {
-                width: 250px;
-                height: 320px;
-            }
+.surpresa h2 {
+    color: white;
+}
 
-            .carta {
-                padding: 25px 20px;
-            }
+.botao-surpresa {
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
 
-            section {
-                padding: 60px 15px;
-            }
+.mensagem-surpresa {
+    display: none;
+    margin: 30px auto 0;
+    max-width: 650px;
+    background: white;
+    color: #704054;
+    padding: 35px;
+    border-radius: 30px;
+    line-height: 1.8;
+    animation: aparecer .6s ease;
+}
 
-            .galeria img {
-                height: 350px;
-            }
-        }
-    </style>
+.mensagem-surpresa.aberta {
+    display: block;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* FINAL */
+
+.final {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff0f6;
+}
+
+.final h2 {
+    font-size: 2.8rem;
+}
+
+.final p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 2.3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .foto-principal {
+        width: 250px;
+        height: 320px;
+    }
+
+    .carta,
+    .caixa-desculpa {
+        padding: 28px 22px;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria img {
+        height: 420px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <!-- CORAÇÕES -->
+<!-- CORAÇÕES -->
 
-    <div class="heart" style="left: 10%; animation-delay: 0s;">❤️</div>
-    <div class="heart" style="left: 25%; animation-delay: 2s;">💕</div>
-    <div class="heart" style="left: 45%; animation-delay: 4s;">❤️</div>
-    <div class="heart" style="left: 65%; animation-delay: 1s;">💖</div>
-    <div class="heart" style="left: 85%; animation-delay: 3s;">💕</div>
+<div class="heart" style="left:10%; animation-delay:0s;">💗</div>
+<div class="heart" style="left:25%; animation-delay:2s;">💕</div>
+<div class="heart" style="left:45%; animation-delay:4s;">🌸</div>
+<div class="heart" style="left:65%; animation-delay:1s;">💗</div>
+<div class="heart" style="left:85%; animation-delay:3s;">💕</div>
 
 
-    <!-- TELA INICIAL -->
+<!-- INÍCIO -->
 
-    <section class="hero">
+<section class="hero">
 
-        <div class="hero-content">
+    <div class="hero-content">
 
-            <h1>Para uma pessoa muito especial ❤️</h1>
+        <div class="pequeno">
+            feito especialmente para você
+        </div>
+
+        <h1>
+            Raquel Kell 💗
+        </h1>
+
+        <p>
+            Eu poderia simplesmente escrever uma mensagem...
+            <br>
+            mas dessa vez eu quis fazer algo diferente.
+        </p>
+
+        <!-- FOTO PRINCIPAL -->
+
+        <img
+            src="foto-principal.jpg"
+            class="foto-principal"
+            alt="Raquel"
+        >
+
+        <br>
+
+        <a href="#comeco" class="botao">
+            Começar 💗
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- COMEÇO -->
+
+<section id="comeco">
+
+    <div class="container">
+
+        <h2>
+            Antes de qualquer coisa...
+        </h2>
+
+        <div class="carta">
 
             <p>
-                Você merece algo mais do que apenas algumas palavras. 🥰❤️
+                Raquel, eu não fiz esse site simplesmente para colocar
+                algumas fotos e frases bonitas.
             </p>
-
-            <!-- FOTO PRINCIPAL -->
-
-            <img
-                src="foto-principal.jpg"
-                class="foto-principal"
-                alt="Uma pessoa muito especial ❤️"
-            >
 
             <br>
 
-            <a href="#carta" class="botao">
-                Clique aqui ❤️
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- CARTA -->
-
-    <section id="carta">
-
-        <div class="container">
-
-            <h2>💌 Uma mensagem para você</h2>
-
-            <div class="carta">
-
-                <p>
-                    Eu queria fazer algo diferente para você.
-                    Algo simples, mas que fosse feito especialmente pensando em você. ❤️
-                </p>
-
-                <br>
-
-                <p>
-                    Talvez eu não consiga colocar em palavras tudo aquilo
-                    que eu sinto, mas espero que esse pequeno site consiga
-                    mostrar pelo menos um pouquinho do quanto você é especial para mim.
-                </p>
-
-                <br>
-
-                <p>
-                    Cada conversa, cada risada, cada brincadeira e cada
-                    momento que passamos juntos se torna algo especial para mim. 🥰
-                </p>
-
-                <br>
-
-                <p>
-                    Espero que sempre que você entrar aqui, você lembre
-                    do quanto é importante para mim. ❤️
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- MOTIVOS -->
-
-    <section>
-
-        <div class="container">
-
-            <h2>💕 Algumas coisas que eu amo em você</h2>
-
-            <div class="motivos">
-
-                <!-- SEU JEITO -->
-
-                <div class="motivo" onclick="abrirMensagem(this)">
-
-                    ❤️ Seu jeito
-
-                    <div class="mensagem-motivo">
-
-                        Eu amo a maneira como você é,
-                        seu jeitinho único que faz eu gostar
-                        cada vez mais de você. ❤️
-
-                    </div>
-
-                </div>
-
-
-                <!-- SUAS BRINCADEIRAS -->
-
-                <div class="motivo" onclick="abrirMensagem(this)">
-
-                    😂 Suas brincadeiras
-
-                    <div class="mensagem-motivo">
-
-                        Até nos momentos mais simples,
-                        você consegue arrancar um sorriso meu. 😂❤️
-
-                    </div>
-
-                </div>
-
-
-                <!-- SEU SORRISO -->
-
-                <div class="motivo" onclick="abrirMensagem(this)">
-
-                    🥰 Seu sorriso
-
-                    <div class="mensagem-motivo">
-
-                        Seu sorriso tem um jeito de melhorar
-                        qualquer dia meu. 🥰❤️
-
-                    </div>
-
-                </div>
-
-
-                <!-- CADA MOMENTO -->
-
-                <div class="motivo" onclick="abrirMensagem(this)">
-
-                    ❤️ Cada momento com você
-
-                    <div class="mensagem-motivo">
-
-                        Até os momentos mais simples ao seu lado
-                        acabam se tornando lembranças que eu quero
-                        guardar para sempre. ❤️
-
-                    </div>
-
-                </div>
-
-
-                <!-- SIMPLESMENTE VOCÊ -->
-
-                <div class="motivo" onclick="abrirMensagem(this)">
-
-                    🥹 Simplesmente você
-
-                    <div class="mensagem-motivo">
-
-                        Eu te amo muito do jeitinho que você é. ❤️
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- GALERIA -->
-
-    <section>
-
-        <div class="container">
-
-            <h2>📸 Alguns momentos especiais</h2>
-
-            <div class="galeria">
-
-                <img
-                    src="foto1.jpg"
-                    alt="Momento especial ❤️"
-                >
-
-                <img
-                    src="foto2.jpg"
-                    alt="Nós dois juntos ❤️"
-                >
-
-                <img
-                    src="foto3.jpg"
-                    alt="Momento especial ❤️"
-                >
-
-                <img
-                    src="foto4.jpg"
-                    alt="Momento especial ❤️"
-                >
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- FINAL -->
-
-    <section class="final">
-
-        <div class="container">
-
-            <h2>
-                ❤️ Você é muito especial para mim ❤️
-            </h2>
+            <p>
+                Eu queria criar alguma coisa que tivesse um pouco de você.
+                Do seu jeito, das coisas que você gosta e, principalmente,
+                que mostrasse que eu parei para pensar em você.
+            </p>
+
+            <br>
 
             <p>
-                E eu espero que esse pequeno cantinho
-                sempre te faça sorrir. 🥰
+                E talvez você esteja se perguntando:
+                <span class="destaque">
+                    "Por que tudo isso?"
+                </span>
             </p>
 
-            <p style="font-size: 2.5rem; margin-top: 30px;">
-                ❤️ 💕 ❤️ 💕 ❤️
+            <br>
+
+            <p>
+                Então continua...
+                porque ainda tem algumas coisas que eu queria te dizer.
             </p>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- JAVASCRIPT -->
+<!-- PEDIDO DE DESCULPAS -->
 
-    <script>
+<section class="desculpa">
 
-        function abrirMensagem(elemento) {
+    <div class="container">
 
-            const motivos = document.querySelectorAll(".motivo");
+        <div class="anel">
+            💍
+        </div>
 
-            motivos.forEach(function(motivo) {
+        <h2>
+            Sobre o anel...
+        </h2>
 
-                if (motivo !== elemento) {
-                    motivo.classList.remove("ativo");
-                }
+        <div class="caixa-desculpa">
 
-            });
+            <p>
+                Eu sei que o anel não foi do jeito que você esperava
+                e eu sinto muito por isso.
+            </p>
 
-            elemento.classList.toggle("ativo");
+            <br>
 
+            <p>
+                Talvez eu tenha colocado muita importância na minha intenção
+                e não tenha pensado o suficiente em como você iria se sentir
+                recebendo aquilo.
+            </p>
+
+            <br>
+
+            <p>
+                E eu entendo que você não tenha gostado.
+            </p>
+
+            <br>
+
+            <p>
+                Eu não fiz esse site para tentar apagar o que aconteceu,
+                muito menos para fazer você esquecer.
+            </p>
+
+            <br>
+
+            <p>
+                Eu só queria pedir desculpas de uma maneira que fosse
+                realmente minha.
+            </p>
+
+            <br>
+
+            <p class="destaque">
+                Desculpa, Raquel. ❤️
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- NÃO É SOBRE O PRESENTE -->
+
+<section>
+
+    <div class="container">
+
+        <h2>
+            Mas esse site não é sobre o anel...
+        </h2>
+
+        <div class="carta">
+
+            <p>
+                O anel foi só uma situação.
+            </p>
+
+            <br>
+
+            <p>
+                O que eu queria colocar aqui é um pouco daquilo
+                que eu vejo em você.
+            </p>
+
+            <br>
+
+            <p>
+                Porque no final das contas, nenhum presente consegue
+                representar uma pessoa.
+            </p>
+
+            <br>
+
+            <p>
+                E você é muito mais do que qualquer coisa que eu pudesse
+                comprar.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- COISAS DELA -->
+
+<section class="coisas-dela">
+
+    <div class="container">
+
+        <h2>
+            Algumas coisas que me lembram você 🌸
+        </h2>
+
+        <div class="coisas">
+
+            <div class="coisa">
+                <span class="emoji">🌸</span>
+                <strong>Rosa</strong>
+                <p>
+                    Porque é uma cor que combina com você.
+                </p>
+            </div>
+
+            <div class="coisa">
+                <span class="emoji">🎀</span>
+                <strong>Barbie</strong>
+                <p>
+                    Uma pequena referência à sua versão Barbie. 💗
+                </p>
+            </div>
+
+            <div class="coisa">
+                <span class="emoji">🐹</span>
+                <strong>Seu hamster</strong>
+                <p>
+                    Porque ele também faz parte das coisas que você gosta.
+                </p>
+            </div>
+
+            <div class="coisa">
+                <span class="emoji">🎶</span>
+                <strong>Música</strong>
+                <p>
+                    Do pagode até essa fase mais gospel. ❤️
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MOTIVOS -->
+
+<section>
+
+    <div class="container">
+
+        <h2>
+            Algumas coisas que eu gosto em você 💕
+        </h2>
+
+        <div class="motivos">
+
+            <div class="motivo" onclick="abrirMensagem(this)">
+
+                💗 Seu jeito
+
+                <div class="mensagem">
+                    Eu gosto do seu jeito de ser,
+                    até das pequenas coisas que talvez você
+                    nem perceba.
+                </div>
+
+            </div>
+
+
+            <div class="motivo" onclick="abrirMensagem(this)">
+
+                😂 Seu jeito de brincar
+
+                <div class="mensagem">
+                    Porque até as coisas mais simples podem
+                    virar uma lembrança boa quando vêm de você.
+                </div>
+
+            </div>
+
+
+            <div class="motivo" onclick="abrirMensagem(this)">
+
+                🥰 Seu sorriso
+
+                <div class="mensagem">
+                    Tem coisas que a gente simplesmente gosta
+                    de ver. Seu sorriso é uma delas.
+                </div>
+
+            </div>
+
+
+            <div class="motivo" onclick="abrirMensagem(this)">
+
+                🌷 Você sendo você
+
+                <div class="mensagem">
+                    Sem precisar ser perfeita, sem precisar
+                    mudar para agradar ninguém.
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- GALERIA -->
+
+<section>
+
+    <div class="container">
+
+        <h2>
+            Algumas fotos suas 📸
+        </h2>
+
+        <div class="galeria">
+
+            <img
+                src="foto1.jpg"
+                alt="Raquel"
+            >
+
+            <img
+                src="foto2.jpg"
+                alt="Nós dois"
+            >
+
+            <img
+                src="foto3.jpg"
+                alt="Raquel"
+            >
+
+            <img
+                src="foto4.jpg"
+                alt="Raquel"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SURPRESA -->
+
+<section class="surpresa">
+
+    <div class="container">
+
+        <h2>
+            Tem mais uma coisa...
+        </h2>
+
+        <p>
+            Mas essa você precisa abrir. 👀
+        </p>
+
+        <br>
+
+        <button
+            class="botao botao-surpresa"
+            onclick="abrirSurpresa()"
+        >
+            🎁 Abrir surpresa
+        </button>
+
+        <div
+            id="mensagemSurpresa"
+            class="mensagem-surpresa"
+        >
+
+            <h3>
+                Raquel...
+            </h3>
+
+            <br>
+
+            <p>
+                Eu não sei exatamente o que vai acontecer depois
+                desse site.
+            </p>
+
+            <br>
+
+            <p>
+                Também não quero usar palavras bonitas para fingir
+                que nada aconteceu.
+            </p>
+
+            <br>
+
+            <p>
+                Eu só queria que você soubesse que eu reconheço
+                meu erro, que sinto muito pelo que aconteceu
+                e que fiz isso pensando em você.
+            </p>
+
+            <br>
+
+            <p>
+                Espero que, pelo menos por alguns minutos,
+                esse cantinho consiga te arrancar um sorriso. 💗
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FINAL -->
+
+<section class="final">
+
+    <div class="container">
+
+        <h2>
+            Obrigado por chegar até aqui. 💗
+        </h2>
+
+        <br>
+
+        <p>
+            Não precisa responder nada agora.
+        </p>
+
+        <br>
+
+        <p>
+            Eu só queria que você soubesse que esse pequeno
+            cantinho foi feito pensando em você.
+        </p>
+
+        <br>
+
+        <p style="font-size:2rem;">
+            🌸 💗 🎀 💗 🌸
+        </p>
+
+    </div>
+
+</section>
+
+
+<script>
+
+function abrirMensagem(elemento) {
+
+    const motivos = document.querySelectorAll(".motivo");
+
+    motivos.forEach(function(motivo) {
+
+        if (motivo !== elemento) {
+            motivo.classList.remove("ativo");
         }
 
-    </script>
+    });
+
+    elemento.classList.toggle("ativo");
+}
+
+
+function abrirSurpresa() {
+
+    const mensagem =
+        document.getElementById("mensagemSurpresa");
+
+    mensagem.classList.toggle("aberta");
+
+}
+
+</script>
 
 </body>
-
 </html>
+```
